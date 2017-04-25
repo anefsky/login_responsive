@@ -1,0 +1,50 @@
+li {
+  list-style: none; }
+
+.forms-widget {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 300px; }
+  .forms-widget ul.tabs {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; }
+    .forms-widget ul.tabs li {
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+      margin: 0 10px;
+      text-align: center;
+      padding: 10px 25px;
+      border-bottom: 1px solid white;
+      cursor: pointer;
+      user-select: none; }
+      .forms-widget ul.tabs li a {
+        text-decoration: none;
+        color: black; }
+      .forms-widget ul.tabs li.selected {
+        background-color: lightblue;
+        margin-bottom: 0;
+        border-color: lightblue;
+        pointer-events: none; }
+  .forms-widget ul.forms {
+    padding-left: 0;
+    margin: 0; }
+    .forms-widget ul.forms li.single-form {
+      padding: 25px;
+      height: 500px;
+      background: lightblue;
+      display: none; }
+      .forms-widget ul.forms li.single-form input {
+        float: left;
+        clear: both;
+        margin: 5px 0;
+        width: 90%;
+        height: 25px; }
+      .forms-widget ul.forms li.single-form.selected {
+        display: block; }
+
+/*# sourceMappingURL=styles.css.map */
