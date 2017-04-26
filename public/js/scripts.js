@@ -1,5 +1,5 @@
 
-function handleFormToggling() {
+(function handleFormToggling() {
     var formsWidget = document.querySelector('.forms-widget');
     var tabMenu = formsWidget.querySelector('ul.tabs')
     var singleTabs = tabMenu.querySelectorAll('li.single-tab');
@@ -19,12 +19,21 @@ function handleFormToggling() {
             singleForms[selectedIndex].classList.add('selected'); // show selected form
         });
     });
+})()
 
-    function getElementIndex(item, collection) { // from https://gist.github.com/astur/7c08319a414cb456c581
-        return [].slice.call(collection).indexOf(item);
-    }
+function getElementIndex(item, collection) { // from https://gist.github.com/astur/7c08319a414cb456c581
+    return [].slice.call(collection).indexOf(item);
 }
 
+(function handleShowHidePassword() {
+    var form = document.querySelectorAll('li.single-form')[0];
+    var container = form.querySelector('span.password-input-container');
+    var toggler = container.querySelector('a');
+    var passwordInput = container.querySelector('input');
 
-
-handleFormToggling();
+    toggler.addEventListener('click', function() {
+        console.log('clicked');
+        passwordInput.setAttribute('type', 'text');
+        passwordInput.style.borderColor = "red";
+    });
+})();
