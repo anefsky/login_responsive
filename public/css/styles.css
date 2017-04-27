@@ -10,8 +10,7 @@ li {
   font-family: Arial, Helvetica, sans-serif;
   user-select: none;
   margin: 0 auto;
-  margin-top: 50px;
-  width: 300px; }
+  max-width: 350px; }
   .forms-widget ul.tabs {
     margin: 0 auto;
     width: 90%;
@@ -23,9 +22,10 @@ li {
       align-items: center;
       background-color: lightgray;
       text-align: center;
-      padding: 10px 25px;
+      padding: 10px 35px;
       border-bottom: 1px solid white;
-      cursor: pointer; }
+      cursor: pointer;
+      font: 12px; }
       .forms-widget ul.tabs li a {
         text-decoration: none;
         color: black; }
@@ -34,42 +34,58 @@ li {
         margin-bottom: 0;
         border-color: lightblue;
         pointer-events: none; }
-  .forms-widget ul.forms {
-    margin: 0; }
-    .forms-widget ul.forms li.single-form {
-      height: 400px;
-      background: lightblue;
-      display: none; }
-      .forms-widget ul.forms li.single-form.selected {
-        display: flex; }
-      .forms-widget ul.forms li.single-form form {
-        width: 100%;
-        padding-top: 100px;
-        text-align: center;
-        position: relative; }
-        .forms-widget ul.forms li.single-form form input {
-          width: calc(90% - 4px);
-          height: 35px;
-          margin: 20px 0 0;
-          text-indent: 20px;
-          font-size: 16px; }
-          .forms-widget ul.forms li.single-form form input::placeholder {
-            opacity: 0.7; }
-        .forms-widget ul.forms li.single-form form button {
-          width: 90%;
+      .forms-widget ul.tabs li:first-child {
+        font: 14px; }
+  .forms-widget ul.forms li.single-form {
+    height: 300px;
+    background: lightblue;
+    display: none; }
+    .forms-widget ul.forms li.single-form.selected {
+      display: flex;
+      align-items: center; }
+    .forms-widget ul.forms li.single-form form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .forms-widget ul.forms li.single-form form .form-content {
+        width: 90%;
+        text-align: center; }
+        .forms-widget ul.forms li.single-form form .form-content input {
+          width: 100%;
+          box-sizing: border-box;
           height: 40px;
-          margin: 20px 0 0;
-          background-color: #0080ff;
+          text-indent: 20px;
+          font-size: 16px;
+          margin-bottom: 25px; }
+          .forms-widget ul.forms li.single-form form .form-content input::placeholder {
+            opacity: 0.7; }
+        .forms-widget ul.forms li.single-form form .form-content button {
+          width: 100%;
+          height: 45px;
+          background-color: blue;
           color: white;
-          font-size: 16px; }
-        .forms-widget ul.forms li.single-form form span.password-input-container {
-          position: relative; }
-          .forms-widget ul.forms li.single-form form span.password-input-container a.show-password {
+          font-size: 16px;
+          margin-bottom: 25px; }
+        .forms-widget ul.forms li.single-form form .form-content a.lost-username-or-password {
+          color: blue;
+          font-size: 12px; }
+        .forms-widget ul.forms li.single-form form .form-content span.password-input-container {
+          position: relative;
+          display: block;
+          margin-bottom: 25px; }
+          .forms-widget ul.forms li.single-form form .form-content span.password-input-container a.show-password {
             text-decoration: none;
             color: blue;
             font-size: 14px;
             position: absolute;
-            right: 25px;
-            top: 0px; }
+            display: block;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%); }
+          .forms-widget ul.forms li.single-form form .form-content span.password-input-container input {
+            margin-bottom: 0; }
+        .forms-widget ul.forms li.single-form form .form-content p.temp-link-msg {
+          margin-bottom: 30px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -21,28 +21,31 @@
 
     <ul class="forms">
       <li class="single-form">
-        <!--         <p>Log In</p> -->
         <form action="/">
-          <input type="text" name="xxx" id="" value="" placeholder="Email or username"/>
-          <span class="password-input-container">
-            <input type="password" name="xxx" id="" value="" placeholder="Password"/>
-            <a class="show-password" href="#">show</a>
-           </span>
-         <button type="submit">Log in</button>
+          <div class="form-content">
+            <input type="text" name="xxx" id="" value="" placeholder="Email or username"/>
+            <span class="password-input-container">
+              <input type="password" name="xxx" id="" value="" placeholder="Password"/>
+              <a class="show-password" href="#">show</a>
+            </span>
+            <button type="submit">Log in</button>
+            <a class="lost-username-or-password">Forget password or username?</a>
+          </div>
+        </form>
+      </li>
+      <li class="single-form">
+       <form action="">
+         <div class="form-content">
+           <p class="temp-link-msg">Get a temporary link to<br/>login sent to your email</p>
+           <input type="text" name="xxx" id="" value="" placeholder="Email or username"/>
+           <button type="submit">Send me a link</button>
+         </div>
        </form>
      </li>
-     <li class="single-form">
-      <!-- <p>Login In Without Password</p> -->
-      <form action="">
-       <input type="text" name="xxx" id="" value="" placeholder="Email or username"/>
-       <button type="submit">Send me a link</button>
-     </form>
-   </li>
- </ul>
-</div>
+   </ul>
+ </div>
 
-<script src="js/scripts.js"></script>
+ <script src="js/scripts.js"></script>
 
 </body>
-
 </html>
